@@ -91,7 +91,7 @@
     mensagem += `Total com taxa de entrega: R$${totalFinal.toFixed(2)}\n`;
 
     const numeroWhatsApp = "81989916110";
-    const link = `http://wa.me/55${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    const link = `https://wa.me/55${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
     window.open(link, '_blank');
 
