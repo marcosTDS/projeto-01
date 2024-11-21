@@ -56,13 +56,13 @@
 
     entrada.forEach(entrada => { total += precoEntrada[entrada] || 0; });
 
-    if (document.getElementById('SALMÃO-SIMPLES').checked) temaki.push('SALMÃO-SIMPLES');
-    if (document.getElementById('SALMÃO-FILADÉLFIA').checked) temaki.push('SALMÃO-FILADÉLFIA');
-    if (document.getElementById('CAMARÃO-CROCANTE').checked) temaki.push('CAMARÃO-CROCANTE');
-    if (document.getElementById('KANI-FILADÉLFIA').checked) temaki.push('KANI-FILADÉLFIA');
-    if (document.getElementById('CAMARÃO-NATURAL').checked) temaki.push('CAMARÃO-NATURAL');
-    if (document.getElementById('KANI-CROCANTE').checked) temaki.push('KANI-CROCANTE');
-    if (document.getElementById('SALMÃO-SUPREMO').checked) temaki.push('SALMÃO-SUPREMO');
+    if (document.getElementById('SALMÃO SIMPLES').checked) temaki.push('SALMÃO SIMPLES');
+    if (document.getElementById('SALMÃO FILADÉLFIA').checked) temaki.push('SALMÃO FILADÉLFIA');
+    if (document.getElementById('CAMARÃO CROCANTE').checked) temaki.push('CAMARÃO CROCANTE');
+    if (document.getElementById('KANI FILADÉLFIA').checked) temaki.push('KANI FILADÉLFIA');
+    if (document.getElementById('CAMARÃO NATURAL').checked) temaki.push('CAMARÃO NATURAL');
+    if (document.getElementById('KANI CROCANTE').checked) temaki.push('KANI CROCANTE');
+    if (document.getElementById('SALMÃO SUPREMO').checked) temaki.push('SALMÃO SUPREMO');
 
     temaki.forEach(temaki => { total += precoTemaki[temaki] || 0; });
     
