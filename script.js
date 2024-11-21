@@ -81,8 +81,12 @@
     mensagem += `entrada: ${entrada.join(', ')}\n`;
     mensagem += `temaki: ${temaki.join(', ')}\n`;
     mensagem += `bebida: ${bebida.join(', ')}\n`;
-    mensagem += `Endereço de entrega:\nRua: ${rua}, Bairro: ${bairro}, Número: ${numero}, Complemento: ${complemento}\n`;
+    mensagem += `Endereço de entrega:\nRua: ${rua}\n`;
+    mensagem += `Bairro: ${bairro}\n`;
+    mensagem += `Número: ${numero}\n`;
+    mensagem += `Complemento: ${complemento}\n`;
     mensagem += `Forma de pagamento: ${pagamento}\n`;
+    mensagem += `Total do pedido: R$${total.toFixed(2)}\n`;
     mensagem += `Taxa de entrega: R$${taxaEntrega.toFixed(2)}\n`;
     mensagem += `Total com taxa de entrega: R$${totalFinal.toFixed(2)}\n`;
 
