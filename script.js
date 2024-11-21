@@ -42,16 +42,16 @@
         total += precoBebida[bebidaSelecionada] || 0;
     }
 
-    if (document.getElementById('BIG-HOT-SALMÃO').checked) entrada.push('BIG-HOT-SALMÃO');
-    if (document.getElementById('BIG-HOT-SALMÃO-E-CAMARÃO').checked) entrada.push('BIG-HOT-SALMÃO-E-CAMARÃO');
-    if (document.getElementById('BIG-HOT-CAMARÃO-NATURAL').checked) entrada.push('BIG-HOT-CAMARÃO-NATURAL');
-    if (document.getElementById('BIG-HOT-KANE-FILADÉLFIA').checked) entrada.push('BIG-HOT-KANE-FILADÉLFIA');
-    if (document.getElementById('NIGUIRI-SALMÃO-10-PEÇAS').checked) entrada.push('NIGUIRI-SALMÃO-10-PEÇAS');
-    if (document.getElementById('SASHIMS-SALMÃO-10-PEÇAS').checked) entrada.push('SASHIMS-SALMÃO-10-PEÇAS');
-    if (document.getElementById('EBY-JOW-3-PEÇAS').checked) entrada.push('EBY-JOW-3-PEÇAS');
-    if (document.getElementById('EBY-FLAY-3-PEÇAS').checked) entrada.push('EBY-FLAY-3-PEÇAS');
-    if (document.getElementById('LOGIA-BOLL-SIMPLES-6-PEÇAS').checked) entrada.push('LOGIA-BOLL-SIMPLES-6-PEÇAS');
-    if (document.getElementById('LOGIA-BOLL-TURBINADO-8-PEÇAS').checked) entrada.push('LOGIA-BOLL-TURBINADO-8-PEÇAS');
+    if (document.getElementById('BIG HOT SALMÃO').checked) entrada.push('BIG HOT SALMÃO');
+    if (document.getElementById('BIG HOT SALMÃO E CAMARÃO').checked) entrada.push('BIG HOT SALMÃO E CAMARÃO');
+    if (document.getElementById('BIG HOT CAMARÃO NATURAL').checked) entrada.push('BIG HOT CAMARÃO NATURAL');
+    if (document.getElementById('BIG HOT KANE FILADÉLFIA').checked) entrada.push('BIG HOT KANE FILADÉLFIA');
+    if (document.getElementById('NIGUIRI SALMÃO 10 PEÇAS').checked) entrada.push('NIGUIRI SALMÃO 10 PEÇAS');
+    if (document.getElementById('SASHIMS SALMÃO 10 PEÇAS').checked) entrada.push('SASHIMS SALMÃO 10 PEÇAS');
+    if (document.getElementById('EBY JOW 3 PEÇAS').checked) entrada.push('EBY JOW 3 PEÇAS');
+    if (document.getElementById('EBY FLAY 3 PEÇAS').checked) entrada.push('EBY FLAY 3 PEÇAS');
+    if (document.getElementById('LOGIA BOLL SIMPLES 6 PEÇAS').checked) entrada.push('LOGIA BOLL SIMPLES 6 PEÇAS');
+    if (document.getElementById('LOGIA BOLL TURBINADO 8 PEÇAS').checked) entrada.push('LOGIA BOLL TURBINADO 8 PEÇAS');
     if (document.getElementById('SUSHI-BURGUER').checked) entrada.push('SUSHI-BURGUER');
 
     entrada.forEach(entrada => { total += precoEntrada[entrada] || 0; });
