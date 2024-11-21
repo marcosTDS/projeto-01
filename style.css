@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(90deg, #491010, rgb(3, 3, 3), #3d3c3c);
+    background-size: 500% 100%;
+    width: 100%;
+    animation: degrade-animado 5s infinite alternate;
+}
+
+@keyframes degrade-animado {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+header {
+    text-align: center;
+    background: #491010;
+}
+
+#sushi {
+    margin-top: -0.6%;
+}
+
+#express {
+    margin-top: -0.5%;
+}
+   
+h1 {
+    color: white;
+}
+
+.logo {
+    color: white;
+    margin-top: 1%;
+}
+
+#entrada {
+    color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+
+#opcoes {
+    color: white;
+    margin-left: -10%;
+    margin-top: 2%;
+
+}
+
+
+
+#temaki {
+    color: white;
+}
+
+#opcoes-2 {
+    color: white;
+    margin-top: 2%;
+}
+
+#opcoes-3 {
+    color: white;
+    margin-top: 2%;
+    margin-left: -5%;
+}
+
+#bebidas {
+    color: white;
+    padding-left: 18%;
+}
+
+.cardapio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    
+}
+
+.todos-0 {
+    padding-left: 20%;
+}
+
+.todos-1 {
+    margin-top: 3%;
+    text-align: center;
+}
+
+.todos-2 {
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+.endereco {
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.localizacao {
+    font-size: 200%;
+    
+}
+
+#rua {
+    font-size: 80%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1%;
+}
+
+#bairro {
+    font-size: 80%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1%;
+}
+
+#numero {
+    font-size: 80%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1%;
+}
+
+#complemento {
+    font-size: 80%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1%;
+}
+
+p {
+    margin-top: -2%;
+}
+
+select {
+    position: absolute;
+    margin-left: 45.5%;
+    margin-top: 3%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 8px 15px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 7%;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 46%;
+    margin-bottom: 2%;
+}
+
+@media(min-width:300px) and (max-width: 600px) {
+    #opcoes {
+       font-size: 13px;
+    }
+    #entrada {
+        font-size: 17px;
+        justify-content: center;
+    }
+    #temaki {
+        font-size: 17px;
+        justify-content: center;
+    }
+    #opcoes-2 {
+        font-size: 13px;
+    }
+    #bebidas {
+        font-size: 17px;
+        justify-content: center;
+        padding-left: 22%;
+    }
+    #opcoes-3 {
+        font-size: 13px;
+    }
+    .todos-0 {
+        width: 100%;
+        margin-left: -10%;
+    }
+    .todos-1 {
+        width: 100%;
+        margin-top: 15%;
+    }
+    .todos-2 {
+        width: 100%;
+        margin-top: 7%;
+        margin-bottom: 10%;
+    }
+    .cardapio {
+        grid-template-columns: none;
+        justify-content: center;
+    }
+    header {
+        justify-content: center;
+    }
+    #sushi {
+        margin-top: -1.3%;
+    }
+    #express {
+        margin-top: -0.8%;
+    }
+    select {
+        width: 50%;
+        margin-left: 25%;
+        
+    }
+    button {
+        margin-top: 15%;
+        margin-left: 33%;
+    }
+    
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .cardapio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #opcoes {
+        width: 100%;
+    }
+    select {
+        width: 30%;
+        margin-left: 35%;
+    }
+    button {
+        margin-top: 10%;
+        margin-left: 43%;
+    }
+    
+} 
