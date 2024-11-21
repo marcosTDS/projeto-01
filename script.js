@@ -1,4 +1,5 @@
- function enviarWhatsApp() {
+
+function enviarWhatsApp() {
     let entrada = [];
     let temaki = [];
     let bebida = [];
@@ -52,7 +53,7 @@
     if (document.getElementById('EBY FLAY 3 PEÇAS').checked) entrada.push('EBY FLAY 3 PEÇAS');
     if (document.getElementById('LOGIA BOLL SIMPLES 6 PEÇAS').checked) entrada.push('LOGIA BOLL SIMPLES 6 PEÇAS');
     if (document.getElementById('LOGIA BOLL TURBINADO 8 PEÇAS').checked) entrada.push('LOGIA BOLL TURBINADO 8 PEÇAS');
-    if (document.getElementById('SUSHI-BURGUER').checked) entrada.push('SUSHI-BURGUER');
+    if (document.getElementById('SUSHI BURGUER').checked) entrada.push('SUSHI BURGUER');
 
     entrada.forEach(entrada => { total += precoEntrada[entrada] || 0; });
 
@@ -93,6 +94,7 @@
     const numeroWhatsApp = "81989916110";
     const link = `https://wa.me/55${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
+   
     window.open(link, '_blank');
 
     
