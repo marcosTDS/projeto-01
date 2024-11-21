@@ -70,7 +70,7 @@
     if (document.getElementById('H2O').checked) bebida.push('H2O');
     if (document.getElementById('SHUEPS').checked) bebida.push('SHUEPS');
     if (document.getElementById('TONICA').checked) bebida.push('TONICA');
-    if (document.getElementById('REFRIGERANTE-1LT').checked) bebida.push('REFRIGERANTE(1LT)');
+    if (document.getElementById('REFRIGERANTE 1LT').checked) bebida.push('REFRIGERANTE(1LT)');
 
     bebida.forEach(bebida => { total += precoBebida[bebida] || 0; });
 
