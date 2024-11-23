@@ -4,9 +4,7 @@ function enviarWhatsApp() {
     let temaki = [];
     let bebida = [];
 
-    const entradaSelecionada = document.getElementById('opcoes').value;
-    const temakiSelecionado = document.getElementById('opcoes-2').value;
-    const bebidaSelecionada = document.getElementById('opcoes-3').value;
+    
     const pagamento = document.getElementById('forma-pagamento').value;
 
     const rua = document.getElementById('rua').value;
@@ -30,7 +28,7 @@ function enviarWhatsApp() {
     };
 
     let total = 0;
-    let pedido = "";
+    let pedido = "sushi";
 
     if (document.getElementById('BIG HOT SALMÃO').checked) {
         const quantidade = parseInt(document.getElementById('BIG HOT SALMÃO-quantidade').value);
@@ -50,10 +48,10 @@ function enviarWhatsApp() {
         total += precoEntrada['BIG HOT CAMARÃO NATURAL'] * quantidade
     }
 
-    if (document.getElementById('BIG HOT KANI FILADÉLFIA').checked) {
-        const quantidade = parseInt(document.getElementById('BIG HOT KANI FILADÉLFIA-quantidade').value);
-        entrada.push({item:'BIG HOT KANI FILADÉLFIA', quantidade: quantidade});
-        total += precoEntrada['BIG HOT FILADÉLFIA'] * quantidade
+    if (document.getElementById('BIG HOT KANE FILADÉLFIA').checked) {
+        const quantidade = parseInt(document.getElementById('BIG HOT KANE FILADÉLFIA-quantidade').value) || 0;
+        entrada.push({item:'BIG HOT KANE FILADÉLFIA', quantidade: quantidade});
+        total += precoEntrada['BIG HOT KANE FILADÉLFIA'] * quantidade
     }
 
     if (document.getElementById('NIGUIRI SALMÃO 10 PEÇAS').checked) {
@@ -100,80 +98,75 @@ function enviarWhatsApp() {
 
     if (document.getElementById('SALMÃO SIMPLES').checked) {
         const quantidade = parseInt(document.getElementById('SALMÃO SIMPLES-quantidade').value);
-        entrada.push({item:'SALMÃO SIMPLES', quantidade: quantidade});
-        total += precoEntrada['SALMÃO SIMPLES'] * quantidade
+        temaki.push({item:'SALMÃO SIMPLES', quantidade: quantidade});
+        total += precoTemaki['SALMÃO SIMPLES'] * quantidade
     }
 
     if (document.getElementById('SALMÃO FILADÉLFIA').checked) {
         const quantidade = parseInt(document.getElementById('SALMÃO FILADÉLFIA-quantidade').value);
-        entrada.push({item:'SALMÃO FILADÉLFIA', quantidade: quantidade});
-        total += precoEntrada['SALMÃO FILADÉLFIA'] * quantidade
+        temaki.push({item:'SALMÃO FILADÉLFIA', quantidade: quantidade});
+        total += precoTemaki['SALMÃO FILADÉLFIA'] * quantidade
     }
 
     if (document.getElementById('CAMARÃO CROCANTE').checked) {
         const quantidade = parseInt(document.getElementById('CAMARÃO CROCANTE-quantidade').value);
-        entrada.push({item:'CAMARÃO CROCANTE', quantidade: quantidade});
-        total += precoEntrada['CAMARÃO CROCANTE'] * quantidade
+        temaki.push({item:'CAMARÃO CROCANTE', quantidade: quantidade});
+        total += precoTemaki['CAMARÃO CROCANTE'] * quantidade
     }
 
     if (document.getElementById('KANI FILADÉLFIA').checked) {
         const quantidade = parseInt(document.getElementById('KANI FILADÉLFIA-quantidade').value);
-        entrada.push({item:'KANI FILADÉLFIA', quantidade: quantidade});
-        total += precoEntrada['KANI FILADÉLFIA'] * quantidade
+        temaki.push({item:'KANI FILADÉLFIA', quantidade: quantidade});
+        total += precoTemaki['KANI FILADÉLFIA'] * quantidade
     }
 
     if (document.getElementById('CAMARÃO NATURAL').checked) {
         const quantidade = parseInt(document.getElementById('CAMARÃO NATURAL-quantidade').value);
-        entrada.push({item:'CAMARÃO NATURAL', quantidade: quantidade});
-        total += precoEntrada['CAMARÃO NATURAL'] * quantidade
+        temaki.push({item:'CAMARÃO NATURAL', quantidade: quantidade});
+        total += precoTemaki['CAMARÃO NATURAL'] * quantidade
     }
 
     if (document.getElementById('KANI CROCANTE').checked) {
-        const quantidade = parseInt(document.getElementById('CAMARÃO NATURAL-quantidade').value);
-        entrada.push({item:'KANI CROCANTE', quantidade: quantidade});
-        total += precoEntrada['KANI CROCANTE'] * quantidade
+        const quantidade = parseInt(document.getElementById('KANI CROCANTE-quantidade').value);
+        temaki.push({item:'KANI CROCANTE', quantidade: quantidade});
+        total += precoTemaki['KANI CROCANTE'] * quantidade
     }
 
     if (document.getElementById('SALMÃO SUPREMO').checked) {
         const quantidade = parseInt(document.getElementById('SALMÃO SUPREMO-quantidade').value);
-        entrada.push({item:'SALMÃO SUPREMO', quantidade: quantidade});
-        total += precoEntrada['SALMÃO SUPREMO'] * quantidade
+        temaki.push({item:'SALMÃO SUPREMO', quantidade: quantidade});
+        total += precoTemaki['SALMÃO SUPREMO'] * quantidade
     }
 
     if (document.getElementById('REFRIGERANTE').checked) {
         const quantidade = parseInt(document.getElementById('REFRIGERANTE-quantidade').value);
-        entrada.push({item:'REFRIGERANTE', quantidade: quantidade});
-        total += precoEntrada['REFRIGERANTE'] * quantidade
+        bebida.push({item:'REFRIGERANTE', quantidade: quantidade});
+        total += precoBebida['REFRIGERANTE'] * quantidade
     }
 
     if (document.getElementById('H2O').checked) {
         const quantidade = parseInt(document.getElementById('H2O-quantidade').value);
-        entrada.push({item:'H2O', quantidade: quantidade});
-        total += precoEntrada['H2O'] * quantidade
+        bebida.push({item:'H2O', quantidade: quantidade});
+        total += precoBebida['H2O'] * quantidade
     }
 
     if (document.getElementById('SHUEPS').checked) {
         const quantidade = parseInt(document.getElementById('SHUEPS-quantidade').value);
-        entrada.push({item:'SHUEPS', quantidade: quantidade});
-        total += precoEntrada['SHUEPS'] * quantidade
+        bebida.push({item:'SHUEPS', quantidade: quantidade});
+        total += precoBebida['SHUEPS'] * quantidade
     }
 
     if (document.getElementById('TONICA').checked) {
         const quantidade = parseInt(document.getElementById('TONICA-quantidade').value);
-        entrada.push({item:'TONICA', quantidade: quantidade});
-        total += precoEntrada['TONICA'] * quantidade
+        bebida.push({item:'TONICA', quantidade: quantidade});
+        total += precoBebida['TONICA'] * quantidade
     }
 
     if (document.getElementById('REFRIGERANTE 1LT').checked) {
         const quantidade = parseInt(document.getElementById('REFRIGERANTE 1LT-quantidade').value);
-        entrada.push({item:'REFRIGERANTE 1LT', quantidade: quantidade});
-        total += precoEntrada['REFRIGERANTE 1LT'] * quantidade
+        bebida.push({item:'REFRIGERANTE 1LT', quantidade: quantidade});
+        total += precoBebida['REFRIGERANTE 1LT'] * quantidade
     }
-
-
-
-
-
 
     const taxaEntrega = 10.00;
     const totalFinal = total + taxaEntrega;
