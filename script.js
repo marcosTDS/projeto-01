@@ -32,48 +32,148 @@ function enviarWhatsApp() {
     let total = 0;
     let pedido = "";
 
-    if (entradaSelecionada !== "") {
-        pedido = entradaSelecionada;
-        total += precoEntrada[entradaSelecionada] || 0;
-    } else if (temakiSelecionado !== "") {
-        pedido = temakiSelecionado;
-        total += precoTemaki[temakiSelecionado] || 0;
-    } else if (bebidaSelecionada !== "") {
-        pedido = bebidaSelecionada;
-        total += precoBebida[bebidaSelecionada] || 0;
+    if (document.getElementById('BIG HOT SALMÃO').checked) {
+        const quantidade = parseInt(document.getElementById('BIG HOT SALMÃO-quantidade').value);
+        entrada.push({item: 'BIG HOT SALMÃO', quantidade: quantidade});
+        total += precoEntrada['BIG HOT SALMÃO'] * quantidade
     }
 
-    if (document.getElementById('BIG HOT SALMÃO').checked) entrada.push('BIG HOT SALMÃO');
-    if (document.getElementById('BIG HOT SALMÃO E CAMARÃO').checked) entrada.push('BIG HOT SALMÃO E CAMARÃO');
-    if (document.getElementById('BIG HOT CAMARÃO NATURAL').checked) entrada.push('BIG HOT CAMARÃO NATURAL');
-    if (document.getElementById('BIG HOT KANE FILADÉLFIA').checked) entrada.push('BIG HOT KANE FILADÉLFIA');
-    if (document.getElementById('NIGUIRI SALMÃO 10 PEÇAS').checked) entrada.push('NIGUIRI SALMÃO 10 PEÇAS');
-    if (document.getElementById('SASHIMS SALMÃO 10 PEÇAS').checked) entrada.push('SASHIMS SALMÃO 10 PEÇAS');
-    if (document.getElementById('EBY JOW 3 PEÇAS').checked) entrada.push('EBY JOW 3 PEÇAS');
-    if (document.getElementById('EBY FLAY 3 PEÇAS').checked) entrada.push('EBY FLAY 3 PEÇAS');
-    if (document.getElementById('LOGIA BOLL SIMPLES 6 PEÇAS').checked) entrada.push('LOGIA BOLL SIMPLES 6 PEÇAS');
-    if (document.getElementById('LOGIA BOLL TURBINADO 8 PEÇAS').checked) entrada.push('LOGIA BOLL TURBINADO 8 PEÇAS');
-    if (document.getElementById('SUSHI BURGUER').checked) entrada.push('SUSHI BURGUER');
+    if (document.getElementById('BIG HOT SALMÃO E CAMARÃO').checked) {
+        const quantidade = parseInt(document.getElementById('BIG HOT SALMÃO E CAMARÃO-quantidade').value);
+        entrada.push({item:'BIG HOT SALMÃO E CAMARÃO', quantidade: quantidade});
+        total += precoEntrada['BIG HOT SALMÃO E CAMARÃO'] * quantidade
+    }
 
-    entrada.forEach(entrada => { total += precoEntrada[entrada] || 0; });
+    if (document.getElementById('BIG HOT CAMARÃO NATURAL').checked) {
+        const quantidade = parseInt(document.getElementById('BIG HOT CAMARÃO NATURAL-quantidade').value);
+        entrada.push({item:'BIG HOT CAMARÃO NATURAL', quantidade: quantidade});
+        total += precoEntrada['BIG HOT CAMARÃO NATURAL'] * quantidade
+    }
 
-    if (document.getElementById('SALMÃO SIMPLES').checked) temaki.push('SALMÃO SIMPLES');
-    if (document.getElementById('SALMÃO FILADÉLFIA').checked) temaki.push('SALMÃO FILADÉLFIA');
-    if (document.getElementById('CAMARÃO CROCANTE').checked) temaki.push('CAMARÃO CROCANTE');
-    if (document.getElementById('KANI FILADÉLFIA').checked) temaki.push('KANI FILADÉLFIA');
-    if (document.getElementById('CAMARÃO NATURAL').checked) temaki.push('CAMARÃO NATURAL');
-    if (document.getElementById('KANI CROCANTE').checked) temaki.push('KANI CROCANTE');
-    if (document.getElementById('SALMÃO SUPREMO').checked) temaki.push('SALMÃO SUPREMO');
+    if (document.getElementById('BIG HOT KANI FILADÉLFIA').checked) {
+        const quantidade = parseInt(document.getElementById('BIG HOT KANI FILADÉLFIA-quantidade').value);
+        entrada.push({item:'BIG HOT KANI FILADÉLFIA', quantidade: quantidade});
+        total += precoEntrada['BIG HOT FILADÉLFIA'] * quantidade
+    }
 
-    temaki.forEach(temaki => { total += precoTemaki[temaki] || 0; });
-    
-    if (document.getElementById('REFRIGERANTE').checked) bebida.push('REFRIGERANTE');
-    if (document.getElementById('H2O').checked) bebida.push('H2O');
-    if (document.getElementById('SHUEPS').checked) bebida.push('SHUEPS');
-    if (document.getElementById('TONICA').checked) bebida.push('TONICA');
-    if (document.getElementById('REFRIGERANTE 1LT').checked) bebida.push('REFRIGERANTE(1LT)');
+    if (document.getElementById('NIGUIRI SALMÃO 10 PEÇAS').checked) {
+        const quantidade = parseInt(document.getElementById('NIGUIRI SALMÃO 10 PEÇAS-quantidade').value);
+        entrada.push({item:'NIGUIRI SALMÃO 10 PEÇAS', quantidade: quantidade});
+        total += precoEntrada['NIGUIRI SALMÃO 10 PEÇAS'] * quantidade
+    }
 
-    bebida.forEach(bebida => { total += precoBebida[bebida] || 0; });
+    if (document.getElementById('SASHIMS SALMÃO 10 PEÇAS').checked) {
+        const quantidade = parseInt(document.getElementById('SASHIMS SALMÃO 10 PEÇAS-quantidade').value);
+        entrada.push({item:'SASHIMS SALMÃO 10 PEÇAS', quantidade: quantidade});
+        total += precoEntrada['SASHIMS SALMÃO 10 PEÇAS'] * quantidade
+    }
+
+    if (document.getElementById('EBY JOW 3 PEÇAS').checked) {
+        const quantidade = parseInt(document.getElementById('EBY JOW 3 PEÇAS-quantidade').value);
+        entrada.push({item:'EBY JOW 3 PEÇAS', quantidade: quantidade});
+        total += precoEntrada['EBY JOW 3 PEÇAS'] * quantidade
+    }
+
+    if (document.getElementById('EBY FLAY 3 PEÇAS').checked) {
+        const quantidade = parseInt(document.getElementById('EBY FLAY 3 PEÇAS-quantidade').value);
+        entrada.push({item:'EBY FLAY 3 PEÇAS', quantidade: quantidade});
+        total += precoEntrada['EBY FLAY 3 PEÇAS'] * quantidade
+    }
+
+    if (document.getElementById('LOGIA BOLL SIMPLES 6 PEÇAS').checked) {
+        const quantidade = parseInt(document.getElementById('LOGIA BOLL SIMPLES 6 PEÇAS-quantidade').value);
+        entrada.push({item:'LOGIA BOLL SIMPLES 6 PEÇAS', quantidade: quantidade});
+        total += precoEntrada['LOGIA BOLL SIMPLES 6 PEÇAS'] * quantidade
+    }
+
+    if (document.getElementById('LOGIA BOLL TURBINADO 8 PEÇAS').checked) {
+        const quantidade = parseInt(document.getElementById('LOGIA BOLL TURBINADO 8 PEÇAS-quantidade').value);
+        entrada.push({item:'LOGIA BOLL TURBINADO 8 PEÇAS', quantidade: quantidade});
+        total += precoEntrada['LOGIA BOLL TURBINADO 8 PEÇAS'] * quantidade
+    }
+
+    if (document.getElementById('SUSHI BURGUER').checked) {
+        const quantidade = parseInt(document.getElementById('SUSHI BURGUER-quantidade').value);
+        entrada.push({item:'SUSHI BURGUER', quantidade: quantidade});
+        total += precoEntrada['SUSHI BURGUER'] * quantidade
+    }
+
+    if (document.getElementById('SALMÃO SIMPLES').checked) {
+        const quantidade = parseInt(document.getElementById('SALMÃO SIMPLES-quantidade').value);
+        entrada.push({item:'SALMÃO SIMPLES', quantidade: quantidade});
+        total += precoEntrada['SALMÃO SIMPLES'] * quantidade
+    }
+
+    if (document.getElementById('SALMÃO FILADÉLFIA').checked) {
+        const quantidade = parseInt(document.getElementById('SALMÃO FILADÉLFIA-quantidade').value);
+        entrada.push({item:'SALMÃO FILADÉLFIA', quantidade: quantidade});
+        total += precoEntrada['SALMÃO FILADÉLFIA'] * quantidade
+    }
+
+    if (document.getElementById('CAMARÃO CROCANTE').checked) {
+        const quantidade = parseInt(document.getElementById('CAMARÃO CROCANTE-quantidade').value);
+        entrada.push({item:'CAMARÃO CROCANTE', quantidade: quantidade});
+        total += precoEntrada['CAMARÃO CROCANTE'] * quantidade
+    }
+
+    if (document.getElementById('KANI FILADÉLFIA').checked) {
+        const quantidade = parseInt(document.getElementById('KANI FILADÉLFIA-quantidade').value);
+        entrada.push({item:'KANI FILADÉLFIA', quantidade: quantidade});
+        total += precoEntrada['KANI FILADÉLFIA'] * quantidade
+    }
+
+    if (document.getElementById('CAMARÃO NATURAL').checked) {
+        const quantidade = parseInt(document.getElementById('CAMARÃO NATURAL-quantidade').value);
+        entrada.push({item:'CAMARÃO NATURAL', quantidade: quantidade});
+        total += precoEntrada['CAMARÃO NATURAL'] * quantidade
+    }
+
+    if (document.getElementById('KANI CROCANTE').checked) {
+        const quantidade = parseInt(document.getElementById('CAMARÃO NATURAL-quantidade').value);
+        entrada.push({item:'KANI CROCANTE', quantidade: quantidade});
+        total += precoEntrada['KANI CROCANTE'] * quantidade
+    }
+
+    if (document.getElementById('SALMÃO SUPREMO').checked) {
+        const quantidade = parseInt(document.getElementById('SALMÃO SUPREMO-quantidade').value);
+        entrada.push({item:'SALMÃO SUPREMO', quantidade: quantidade});
+        total += precoEntrada['SALMÃO SUPREMO'] * quantidade
+    }
+
+    if (document.getElementById('REFRIGERANTE').checked) {
+        const quantidade = parseInt(document.getElementById('REFRIGERANTE-quantidade').value);
+        entrada.push({item:'REFRIGERANTE', quantidade: quantidade});
+        total += precoEntrada['REFRIGERANTE'] * quantidade
+    }
+
+    if (document.getElementById('H2O').checked) {
+        const quantidade = parseInt(document.getElementById('H2O-quantidade').value);
+        entrada.push({item:'H2O', quantidade: quantidade});
+        total += precoEntrada['H2O'] * quantidade
+    }
+
+    if (document.getElementById('SHUEPS').checked) {
+        const quantidade = parseInt(document.getElementById('SHUEPS-quantidade').value);
+        entrada.push({item:'SHUEPS', quantidade: quantidade});
+        total += precoEntrada['SHUEPS'] * quantidade
+    }
+
+    if (document.getElementById('TONICA').checked) {
+        const quantidade = parseInt(document.getElementById('TONICA-quantidade').value);
+        entrada.push({item:'TONICA', quantidade: quantidade});
+        total += precoEntrada['TONICA'] * quantidade
+    }
+
+    if (document.getElementById('REFRIGERANTE 1LT').checked) {
+        const quantidade = parseInt(document.getElementById('REFRIGERANTE 1LT-quantidade').value);
+        entrada.push({item:'REFRIGERANTE 1LT', quantidade: quantidade});
+        total += precoEntrada['REFRIGERANTE 1LT'] * quantidade
+    }
+
+
+
+
+
 
     const taxaEntrega = 10.00;
     const totalFinal = total + taxaEntrega;
@@ -99,6 +199,5 @@ function enviarWhatsApp() {
 
     
 }
-
 
 
