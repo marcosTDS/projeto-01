@@ -76,6 +76,8 @@ h1 {
     padding-left: 18%;
 }
 
+
+
 .cardapio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -105,7 +107,20 @@ h1 {
 
 .localizacao {
     font-size: 200%;
-    
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+input {
+    border: none;
+    width: 3%;
+}
+
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+   
 }
 
 #rua {
@@ -114,6 +129,7 @@ h1 {
     border: none;
     border-radius: 10px;
     padding-left: 1%;
+    width: 20%;
 }
 
 #bairro {
@@ -122,6 +138,7 @@ h1 {
     border: none;
     border-radius: 10px;
     padding-left: 1%;
+    width: 20%;
 }
 
 #numero {
@@ -130,6 +147,7 @@ h1 {
     border: none;
     border-radius: 10px;
     padding-left: 1%;
+    width: 20%;
 }
 
 #complemento {
@@ -138,6 +156,7 @@ h1 {
     border: none;
     border-radius: 10px;
     padding-left: 1%;
+    width: 20%;
 }
 
 p {
@@ -167,13 +186,18 @@ button {
     margin-bottom: 2%;
 }
 
-@media(min-width:300px) and (max-width: 600px) {
+@media(min-width:300px) and (max-width: 500px) {
+    
+
     #opcoes {
        font-size: 13px;
+       margin-left: 3%;
+       margin-top: 5%;
     }
     #entrada {
         font-size: 17px;
         justify-content: center;
+        margin-left: 30%;
     }
     #temaki {
         font-size: 17px;
@@ -181,14 +205,17 @@ button {
     }
     #opcoes-2 {
         font-size: 13px;
+        margin-top: 5%;
     }
     #bebidas {
         font-size: 17px;
         justify-content: center;
-        padding-left: 22%;
+        padding-left: 25%;
     }
     #opcoes-3 {
         font-size: 13px;
+        margin-left: 4%;
+        margin-top: 5%;
     }
     .todos-0 {
         width: 100%;
@@ -215,6 +242,22 @@ button {
     }
     #express {
         margin-top: -0.8%;
+    }
+    .localizacao {
+       font-size: 22px;
+        width: 100%;
+    }
+    #rua {
+        width: 50%;
+    }
+    #bairro {
+        width: 50%;
+    }
+    #numero {
+        width: 50%;
+    }
+    #complemento {
+        width: 50%;
     }
     select {
         width: 50%;
