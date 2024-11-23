@@ -171,18 +171,22 @@ function enviarWhatsApp() {
     const taxaEntrega = 10.00;
     const totalFinal = total + taxaEntrega;
 
-    let mensagem = `Pedido sushi: \n\nTipo: ${pedido}\n`;
-    mensagem += `entrada: ${entrada.join(', ')}\n`;
-    mensagem += `temaki: ${temaki.join(', ')}\n`;
-    mensagem += `bebida: ${bebida.join(', ')}\n`;
-    mensagem += `Endereço de entrega:\nRua: ${rua}\n`;
-    mensagem += `Bairro: ${bairro}\n`;
+    const formatarItens = (itens) => {
+        return itens.map(item => `${item.quantidade}x ${item.item}`).join(', ');
+    };
+
+    let mensagem = `Tipo: ${pedido}\n`;
+    mensagem += `${formatarItens(entrada)}\n\n`;
+    mensagem += `${formatarItens(temaki)}\n\n`;
+    mensagem += `${formatarItens(bebida)}\n\n`;
+    mensagem += `Endereço de entrega:\nRua: ${rua}\n\n`;
+    mensagem += `Bairro: ${bairro}\n\n`;
     mensagem += `Número: ${numero}\n`;
-    mensagem += `Complemento: ${complemento}\n`;
-    mensagem += `Forma de pagamento: ${pagamento}\n`;
-    mensagem += `Total do pedido: R$${total.toFixed(2)}\n`;
-    mensagem += `Taxa de entrega: R$${taxaEntrega.toFixed(2)}\n`;
-    mensagem += `Total com taxa de entrega: R$${totalFinal.toFixed(2)}\n`;
+    mensagem += `Complemento: ${complemento}\n\n`;
+    mensagem += `Forma de pagamento: ${pagamento}\n\n`;
+    mensagem += `Total do pedido: R$${total.toFixed(2)}\n\n`;
+    mensagem += `Taxa de entrega: R$${taxaEntrega.toFixed(2)}\n\n`;
+    mensagem += `Total com taxa de entrega: R$${totalFinal.toFixed(2)}`;
 
     const numeroWhatsApp = "81989916110";
     const link = `https://wa.me/55${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
