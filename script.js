@@ -175,13 +175,13 @@ function enviarWhatsApp() {
         return itens.map(item => `${item.quantidade}x ${item.item}`).join(', ');
     };
 
-    let mensagem = `Tipo: ${pedido}\n`;
+    let mensagem = `Tipo: ${pedido}\n\n`;
     mensagem += `${formatarItens(entrada)}\n\n`;
     mensagem += `${formatarItens(temaki)}\n\n`;
     mensagem += `${formatarItens(bebida)}\n\n`;
-    mensagem += `Endereço de entrega:\nRua: ${rua}\n\n`;
+    mensagem += `Endereço de entrega: Rua: ${rua}\n\n`;
     mensagem += `Bairro: ${bairro}\n\n`;
-    mensagem += `Número: ${numero}\n`;
+    mensagem += `Número: ${numero}\n\n`;
     mensagem += `Complemento: ${complemento}\n\n`;
     mensagem += `Forma de pagamento: ${pagamento}\n\n`;
     mensagem += `Total do pedido: R$${total.toFixed(2)}\n\n`;
