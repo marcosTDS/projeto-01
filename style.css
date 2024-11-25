@@ -296,10 +296,23 @@ button {
     p {
         padding: 0 0 0 8%;
     }
+    #forma-pagamento {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     select {
         padding: 5px 0 5px 0px;
         width: 35%; 
     }
+    .botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
     button {
         margin: 0 0 5% 10%;
         padding: 5px 0 5px 0;
