@@ -307,15 +307,11 @@ button {
         width: 35%; 
     }
     .botao {
-    display: none;
+    padding: 0 0 0 30px;
     height: 100%;
     width: 100%;
 }
-    button {
-        margin: 5% 0 5% 0;
-        padding: 10px 0 10px 20px;
-        width: 40%;
-    }
+
     
     
 }
