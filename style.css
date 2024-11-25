@@ -144,12 +144,14 @@ p {
 input {
     border: none;
     width: 3%;
+    
 }
 
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
    
 }
+
 
 
 
@@ -197,20 +199,23 @@ button {
        padding: 0 0 0.5% 35%;
        
     }
+    h1 {
+        margin-left: -5%;
+    }
     #eliz {
-       padding: 3% 0 0 12%;
+       padding: 3% 0 0 10%;
     }
     #sushi {
-       padding: 0 0 0 5%;
-       margin-top: -4%;
+       padding: 0 0 0 2%;
+       margin-top: -5%;
     }
     #express {
-       padding: 0 0 0 11%;
-       margin-top: -2.3%;
+       padding: 0 0 0 9.5%;
+       margin-top: -3.5%;
     }
     #entrada {
         font-size: 17px; 
-        padding: 2% 0 0 33%;
+        padding: 2% 0 0 36%;
     }
     #opcoes {
         font-size: 12px;
@@ -229,23 +234,26 @@ button {
     }
     #bebidas {
         font-size: 17px;
-        padding: 7% 0 0 35%;
+        padding: 7% 0 0 37%;
     }
     #opcoes-3 {
         font-size: 13px;
         padding: 5% 0 0 12%;
     }
     .todos-0 {
+        margin: 0 0 0 -4.5%;
         font-size: 16px;
         width: 100%;
        
     }
     .todos-1 {
+        margin-left: -4%;
         font-size: 16px;
         width: 100%;
         
     }
     .todos-2 {
+        margin-left: -5%;
         font-size: 16px;
         width: 100%;  
     }
@@ -255,36 +263,46 @@ button {
     .endereco {
        margin-left: -19%;
     }
+    .endereco-1 {
+        margin-left: -5%;
+    }
     .localizacao {
-       font-size: 16px;
-        width: 85%;
-        margin: 0 0 0 7%;
-        
-
+       font-size: 18px;
+        width: 90%;
+        margin: 0 0 0 4%;
     }
     #rua {
         width: 70%;
+        height: 18px;
         margin-top: 2%;
         
         
     }
     #bairro {
         width: 70%;
+        height: 18px;
         margin-top: 2%;
     }
     #numero {
         width: 70%;
+        height: 18px;
         margin-top: 2%;
     }
     #complemento {
         width: 70%;
+        height: 18px;
         margin-top: 2%;
     }
     p {
-        padding: 0 0 0 11%;
+        padding: 0 0 0 8%;
     }
     select {
-        width: 50%; 
+        padding: 5px 5px;
+        width: 35%; 
+    }
+    button {
+        padding: 5px 0 5px 0;
+        width: 40%;
     }
     
     
