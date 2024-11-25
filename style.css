@@ -297,11 +297,12 @@ button {
         padding: 0 0 0 8%;
     }
     select {
-        padding: 5px 0 5px 20px;
+        padding: 5px 0 5px 0px;
         width: 35%; 
     }
     button {
-        padding: 5px 0 5px 20px;
+        margin: 0 0 5% 10%;
+        padding: 5px 0 5px 0;
         width: 40%;
     }
     
