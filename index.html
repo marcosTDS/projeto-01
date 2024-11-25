@@ -231,14 +231,18 @@
         <p>Taxa de entrega R$ 10,00</p>
     </div>
 
-    <select id="forma-pagamento" required>
+    <div id="forma-pagamento">
+    <select required>
       <option value="" disabled selected>Selecionar</option>
        <option value="Á vista">Á vista</option>
         <option value="Pix">Pix</option>
          <option value="Cartão">Cartão</option>
     </select>
+        </div>
 
+    <div class="botao">
     <button onclick="enviarWhatsApp()">Fazer Pedido</button>
+    </div>
 
 
    <script src="script.js"></script>
