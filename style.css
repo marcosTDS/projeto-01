@@ -315,8 +315,8 @@ button {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 50%; /* Define 50% de largura */
-    margin: 0 auto; /* Centraliza a div da classe botao */
+    width: 50%; 
+    margin: 0 auto; 
     }
 
     button {
@@ -327,7 +327,7 @@ button {
     cursor: pointer;
     border-radius: 10px; 
     padding: 10px 30px;
-    margin: 1% 0 2% 0;
+    margin: 1% 0 2% 50%;
     }
 
 
