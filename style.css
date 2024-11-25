@@ -302,24 +302,24 @@ button {
     align-items: center;
     width: 50%; /* Define 50% de largura */
     margin: 0 auto; /* Centraliza horizontalmente */
-}
+    }
 
-select {
+    select {
     padding: 10px;
     font-size: 16px;
     border-radius: 10px;
-}
+    }
 
-.botao {
+    .botao {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 50%; /* Define 50% de largura */
     margin: 0 auto; /* Centraliza a div da classe botao */
-}
+    }
 
-button {
+    button {
     font-size: 16px;
     background: #4CAF50;
     color: white;
@@ -328,12 +328,12 @@ button {
     border-radius: 10px; 
     padding: 10px 30px;
     margin: 1% 0 2% 0;
-}
+    }
 
 
     
     
-}
+    }
 
 
    
