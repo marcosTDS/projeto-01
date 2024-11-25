@@ -297,18 +297,39 @@ button {
         padding: 0 0 0 8%;
     }
     #forma-pagamento {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    select {
-        padding: 5px 0 5px 0px;
-        width: 35%; 
-    }
-    .botao {
-    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+   
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px; 
+    padding: 10px 30px;
+    margin: 1% 0 2% 0%;
+}
+
 
     
     
