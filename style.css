@@ -29,8 +29,8 @@ header {
 }
 
 #sushi {
-   padding: 0 0 0 1%;
-   margin: -0% 0 0 0;
+   padding: 0 0 0 1.8%;
+   margin: -1% 0 0 0;
 }
 
 #express {
@@ -169,7 +169,7 @@ select {
 }
 
 .botao {
-    display: flex;
+    display: n;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -207,7 +207,7 @@ button {
     }
     #sushi {
        padding: 0 0 0 2%;
-       margin-top: -5%;
+       margin-top: -4%;
     }
     #express {
        padding: 0 0 0 9.5%;
@@ -269,71 +269,73 @@ button {
     .localizacao {
        font-size: 18px;
         width: 90%;
-        margin: 0 0 0 4%;
+        margin: 0 0 0 -1%;
     }
     #rua {
-        width: 70%;
-        height: 18px;
+        width: 80%;
+        height: 25px;
         margin-top: 2%;
         
         
     }
     #bairro {
-        width: 70%;
-        height: 18px;
-        margin-top: 2%;
+        width: 80%;
+        height: 25px;
+        margin-top: 4%;
     }
     #numero {
-        width: 70%;
-        height: 18px;
-        margin-top: 2%;
+        width: 80%;
+        height: 25px;
+        margin-top: 4%;
     }
     #complemento {
-        width: 70%;
-        height: 18px;
-        margin-top: 2%;
+        width: 80%;
+        height: 25px;
+        margin-top: 4%;
     }
     p {
         padding: 0 0 0 8%;
     }
     #forma-pagamento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%; /* Define 50% de largura */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    }
-
-    select {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
-    }
-
-    .botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%; 
-    margin: 0 auto; 
-    }
-
-    button {
-    font-size: 16px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px; 
-    padding: 10px 30px;
-    margin: 1% 0 2% 50%;
-    }
-
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%; 
+        margin: 0 auto; 
+        }
+    
+        select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        }
+    
+        .botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 50%; 
+        margin: 0 auto; 
+        }
+    
+        button {
+        font-size: 16px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px; 
+        padding: 10px 30px;
+        margin: 1% 0 2% 0;
+        }
     
     
-    }
+        
+        
+    
+    
+}
 
 
    
